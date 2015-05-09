@@ -1,2 +1,4 @@
-# EmailLogin
-Allow user to login with email, a Open Source Social Network component
+Email Login
+=============
+
+Allow users to login with email
