@@ -27,4 +27,16 @@ A fork of: https://github.com/lianglee/EmailLogin (Discontinued, applied to OSSN
 ### Note on the OSSN version requirement
 It is possible to install this on older versions of OSSN, but I cannot gurantee that as I have not reviewed the code of those versions.
 <br>
-If you are brave to try on older versions of OSSN, feel free to change the ossn_com.xml file's requirement lower.
+If you are brave to try on older versions of OSSN, feel free to change the ossn_com.xml file's requirement lower to meet your needs.
+
+## The Story of Making this Component
+This project was just a concept on my mind until I suddenly started doing the experiments on the original code by lianglee but I rather used the OSSN v7.0 code and copied it to MS Notepad.
+<br>
+Then, it fails and I resetted this component's development for 5 times. And deleted this repository 2 or 3 times (can't remember the exact count). I was hopeless for the sucess of this component.
+<br>
+Until, I discovered that I just need to remove the if statement related to the email part and the syntax closer "}" on the code and miraculously it works!
+
+
+## Download Link
+TBD
+
