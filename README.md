@@ -1,5 +1,4 @@
 # Strict Email Login
-=============
 Allow only the user to login only with email, a Open Source Social Network component
 
 ## Info About the Component
