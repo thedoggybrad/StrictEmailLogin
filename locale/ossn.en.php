@@ -9,6 +9,8 @@
  * @link      http://www.opensource-socialnetwork.org/licence
  */
 $en = array(
-		'username' => 'Username or Email',
+		'username' => 'Email Address',
+        'login:error' => 'Invalid email address or password!',
+        'login:error:sub' => "We couldn't log you in. Please check your email address or password and try again.",
 );
 ossn_register_languages('en', $en); 
