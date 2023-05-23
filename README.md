@@ -1,6 +1,9 @@
 # Strict Email Login
 Allow only the user to login only with email, a Open Source Social Network component. It is a modified component by lianglee (structural, ossn_com.php file) but the actions code are a modified OSSN v7.0. The ossn_com.xml was based on the information on OSSN's website.
 
+## Download Link
+TBD
+
 ## Info About the Component
 Name: Strict Email Login
 <br>
@@ -37,6 +40,4 @@ Then, it fails and I resetted this component's development for 5 times. And dele
 Until, I discovered that I just need to remove the if statement related to the email part and the syntax closer "}" on the code and miraculously it works!
 
 
-## Download Link
-TBD
 
