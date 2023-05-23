@@ -28,7 +28,7 @@ Tested up to: Version 7.0
 A fork of: https://github.com/lianglee/EmailLogin (Discontinued, applied to OSSN Core)
 
 ### Note on the OSSN version requirement
-It is possible to install this on older versions of OSSN, but I cannot gurantee that as I have not reviewed the code of those versions.
+It is possible to install this and make it work on older versions of OSSN, but I cannot gurantee that will work on those versions as I have not reviewed the code of those versions.
 <br>
 If you are brave to try on older versions of OSSN, feel free to change the ossn_com.xml file's requirement lower to meet your needs.
 
