@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
      <name>Strict Email Login</name>
-     <id>Strict Email Login</id>
+     <id>StrictEmailLogin</id>
      <author>TheDoggyBrad / Arsalan Shah</author>
      <description>Allow only the user to login only with email, a Open Source Social Network component</description>
      <license>OSSN v4 License</license>
