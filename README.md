@@ -6,7 +6,7 @@ Name: Strict Email Login
 <br>
 ID: StrictEmailLogin
 <br>
-Author: TheDoggyBrad / Arsalan Shah
+Author: TheDoggyBrad / Arsalan Shah (lianglee)
 <br>
 Description: Allow only the user to login only with email, a Open Source Social Network component
 <br>
