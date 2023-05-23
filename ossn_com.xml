@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component xmlns="http:/opensource-socialnetwork.org/v/1.0">
-    <com_name>Email Login</com_name>
-    <com_author>Arsalan Shah</com_author>
-    <com_description>Allow users to login with email.</com_description>
-    <com_license>General Public License Version 3</com_license>
-    <com_author_url>http://www.informatikon.com/</com_author_url>
-    <com_licence_url>http://opensource-socialnetwork.org/licence/</com_licence_url>
-    <com_version>1.2</com_version>
-</component>
+ <component xmlns="http://www.opensource-socialnetwork.org/v/3.0">
+     <name>Strict Email Login</name>
+     <id>Strict Email Login</id>
+     <author>TheDoggyBrad / Arsalan Shah</author>
+     <description>Allow only the user to login only with email, a Open Source Social Network component</description>
+     <license>OSSN v4 License</license>
+     <author_url>https://github.com/thedoggybrad</author_url>
+     <license_url>https://www.opensource-socialnetwork.org/licence/v4.0.html</license_url>
+     <version>1.0</version>
+    <requires>
+        <type>ossn_version</type>
+        <version>7.0</version>
+    </requires>
+ </component>
