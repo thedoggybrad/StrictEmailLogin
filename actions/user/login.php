@@ -2,35 +2,43 @@
 /**
  * Open Source Social Network
  *
- * @package   (Informatikon.com).ossn
- * @author    OSSN Core Team <info@opensource-socialnetwork.org>
- * @copyright 2014 iNFORMATIKON TECHNOLOGIES
- * @license   General Public Licence http://www.opensource-socialnetwork.org/licence
- * @link      http://www.opensource-socialnetwork.org/licence
+ * @package   (openteknik.com).ossn
+ * @author    OSSN Core Team <info@openteknik.com>
+ * @copyright (C) OpenTeknik LLC
+ * @license   Open Source Social Network License (OSSN LICENSE)  http://www.opensource-socialnetwork.org/licence
+ * @link      https://www.opensource-socialnetwork.org/
  */
 
-if (ossn_isLoggedin()) {
-    redirect('home');
+if(ossn_isLoggedin()) {
+		redirect('home');
 }
-$username = input('email');
+$username = input('username');
 $password = input('password');
 
-if (empty($username) || empty($password)) {
-    ossn_trigger_message(ossn_print('login:error'));
-    redirect();
+if(empty($username) || empty($password)) {
+		ossn_trigger_message(ossn_print('login:error') , 'error');
+		redirect();
 }
 $user = ossn_user_by_email($username);
+$username = $user->username;
 
-if($user && !$user->isUserVALIDATED()){
-	$user->resendValidationEmail();
-	ossn_trigger_message(ossn_print('ossn:user:validation:resend'), 'error');
-	redirect(REF);
+if($user && !$user->isUserVALIDATED()) {
+		$user->resendValidationEmail();
+		ossn_trigger_message(ossn_print('ossn:user:validation:resend'), 'error');
+		redirect(REF);
 }
-$login = new OssnUser;
+$vars = array(
+		'user' => $user
+);
+ossn_trigger_callback('user', 'before:login', $vars);
+
+$login           = new OssnUser;
 $login->username = $username;
 $login->password = $password;
-if ($login->Login()) {
-    redirect(REF);
+if($login->Login()) {
+		//One uneeded redirection when login #516
+		ossn_trigger_callback('login', 'success', $vars);
+		redirect('home');
 } else {
-    redirect('login?error=1');
+		redirect('login?error=1');
 }
