@@ -33,7 +33,9 @@ It is possible to install this on older versions of OSSN, but I cannot gurantee 
 If you are brave to try on older versions of OSSN, feel free to change the ossn_com.xml file's requirement lower to meet your needs.
 
 ## The Story of Making this Component
-This project was just a concept on my mind until I suddenly started doing the experiments on the original code by lianglee but I rather used the OSSN v7.0 code and copied it to MS Notepad.
+This project was just a concept on my mind until I have thinked that Facebook does not allow login using usernames. This thread that I read on OSSN inspires me on making this component https://www.opensource-socialnetwork.org/discussion/view/2861/users-account-can-easily-be-hacked/ but I am not insipired for what the thread author calls a vulnerability but it is possible to really happen.
+<br>
+Then, I suddenly started doing the experiments on the original code by lianglee but I rather used the OSSN v7.0 code and copied it to MS Notepad.
 <br>
 Then, it fails and I resetted this component's development for 5 times. And deleted this repository 2 or 3 times (can't remember the exact count). I was hopeless for the sucess of this component.
 <br>
