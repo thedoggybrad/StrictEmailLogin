@@ -15,11 +15,11 @@
  * @return void;
  */
 function email_login_init() {
-		$path = ossn_route()->com . "EmailLogin/actions/";
+		$path = ossn_route()->com . "StrictEmailLogin/actions/";
 		
 		$actions = array();
 		$actions[] = 'user/login';
-		$actions[] = 'admin/login';
+		$actions[] = 'administrator/login';
 		
 		foreach($actions as $action){
 			ossn_unregister_action($action);
