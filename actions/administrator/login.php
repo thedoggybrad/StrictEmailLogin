@@ -12,14 +12,12 @@ if (ossn_isAdminLoggedin()) {
     redirect('administrator/dashboard');
 }
 
-$username = input('username');
+$username = input('email');
 $password = input('password');
 
-//check if username is email
-if (strpos($username, '@') !== false){
-	$user = ossn_user_by_email($username);
-	$username = $user->username;
-}
+
+$user = ossn_user_by_email($username);
+
 
 if (ossn_user_by_username($username)->type !== 'admin') {
     ossn_trigger_message(ossn_print('login:error'), 'error');
