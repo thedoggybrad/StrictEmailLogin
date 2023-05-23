@@ -2,24 +2,24 @@
 /**
  * Open Source Social Network
  *
- * @package   (Informatikon.com).ossn
- * @author    OSSN Core Team <info@opensource-socialnetwork.org>
- * @copyright 2014 iNFORMATIKON TECHNOLOGIES
- * @license   General Public Licence http://www.opensource-socialnetwork.org/licence
- * @link      http://www.opensource-socialnetwork.org/licence
+ * @package   (openteknik.com).ossn
+ * @author    OSSN Core Team <info@openteknik.com>
+ * @copyright (C) OpenTeknik LLC
+ * @license   Open Source Social Network License (OSSN LICENSE)  http://www.opensource-socialnetwork.org/licence
+ * @link      https://www.opensource-socialnetwork.org/
  */
 if (ossn_isAdminLoggedin()) {
     redirect('administrator/dashboard');
 }
 
-$username = input('email');
+$username = input('username');
 $password = input('password');
 
+    $user = ossn_user_by_email($username);
+    $username = $user->username;
 
-$user = ossn_user_by_email($username);
-
-
-if (ossn_user_by_username($username)->type !== 'admin') {
+$checktype = ossn_user_by_email($username);
+if ($checktype && $checktype->type !== 'admin') {
     ossn_trigger_message(ossn_print('login:error'), 'error');
     redirect(REF);
 }
