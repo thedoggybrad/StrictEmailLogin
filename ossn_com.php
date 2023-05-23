@@ -19,7 +19,7 @@ function email_login_init() {
 		
 		$actions = array();
 		$actions[] = 'user/login';
-		$actions[] = 'administrator/login';
+		$actions[] = 'admin/login';
 		
 		foreach($actions as $action){
 			ossn_unregister_action($action);
