@@ -12,20 +12,14 @@
 if (ossn_isLoggedin()) {
     redirect('home');
 }
-$username = input('username');
+$username = input('email');
 $password = input('password');
 
 if (empty($username) || empty($password)) {
     ossn_trigger_message(ossn_print('login:error'));
     redirect();
 }
-$user = ossn_user_by_username($username);
-
-//check if username is email
-if (strpos($username, '@') !== false){
-	$user = ossn_user_by_email($username);
-	$username = $user->username;
-}
+$user = ossn_user_by_email($username);
 
 if($user && !$user->isUserVALIDATED()){
 	$user->resendValidationEmail();
