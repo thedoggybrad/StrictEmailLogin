@@ -14,9 +14,14 @@
  * 
  * @return void;
  */
+
+define('StrictEmailLogin', ossn_route()->com . 'StrictEmailLogin/');
+
 function email_login_init() {
-	ossn_extend_view('forms/ossn.default', 'StrictEmailLogin/plugins/default/forms/login.php');
-      ossn_extend_view('admin/ossn.default', 'StrictEmailLogin/plugins/default/forms/admin/login.php');
+
+           ossn_extend_view('forms/login/before', 'forms/login');
+    ossn_extend_view('forms/login2/before', 'forms/login2');
+         ossn_extend_view('forms/login/admin/before', 'forms/admin/login');
 
 		$path = ossn_route()->com . "StrictEmailLogin/actions/";
 		
