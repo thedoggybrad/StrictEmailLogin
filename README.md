@@ -2,7 +2,7 @@
 Allow only the user to login only with email, a Open Source Social Network component. It is a modified component by lianglee (structural, ossn_com.php file) but the actions code are a modified OSSN v7.0. The ossn_com.xml was based on the information on OSSN's website.
 
 ## Download Link
-https://github.com/thedoggybrad/StrictEmailLogin/releases/download/1.1/StrictEmailLogin.zip
+https://github.com/thedoggybrad/StrictEmailLogin/releases/download/1.2/StrictEmailLogin.zip
 
 ## Info About the Component
 Name: Strict Email Login
@@ -19,7 +19,7 @@ Author URL: https://github.com/thedoggybrad/StrictEmailLogin
 <br>
 License URL: https://www.opensource-socialnetwork.org/licence/v4.0.html
 <br>
-Component Version: 1.1
+Component Version: 1.2
 <br>
 Requires: Version 5.6 (The earliest verified version that uses the same login system by me)
 <br>
