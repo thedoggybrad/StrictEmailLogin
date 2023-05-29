@@ -9,7 +9,7 @@
  * @link      http://www.opensource-socialnetwork.org/licence
  */
 $en = array(
-		'username' => 'Email Address',
+        'username' => 'Email (Login) or Username (Registration)',
         'login:error' => 'Invalid email address or password!',
         'login:error:sub' => "We couldn't log you in. Please check your email address or password and try again.",
 );
