@@ -15,6 +15,9 @@
  * @return void;
  */
 function email_login_init() {
+	ossn_extend_view('forms/ossn.default', 'StrictEmailLogin/plugins/default/forms/login.php');
+      ossn_extend_view('admin/ossn.default', 'StrictEmailLogin/plugins/default/forms/admin/login.php');
+
 		$path = ossn_route()->com . "StrictEmailLogin/actions/";
 		
 		$actions = array();
@@ -24,6 +27,7 @@ function email_login_init() {
 		foreach($actions as $action){
 			ossn_unregister_action($action);
 			ossn_register_action($action, $path . $action . '.php');
+
 		}
 }
 

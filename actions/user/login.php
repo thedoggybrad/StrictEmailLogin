@@ -12,18 +12,16 @@
 if(ossn_isLoggedin()) {
 		redirect('home');
 }
-$username = input('username');
+$email = input('email');
 $password = input('password');
 
-if(empty($username) || empty($password)) {
+if(empty($email) || empty($password)) {
 		ossn_trigger_message(ossn_print('login:error') , 'error');
 		redirect();
 }
-$user = ossn_user_by_email($username);
-$username = $user->username;
 
-if($user && !$user->isUserVALIDATED()) {
-		$user->resendValidationEmail();
+if($email && !$email->isUserVALIDATED()) {
+		$email->resendValidationEmail();
 		ossn_trigger_message(ossn_print('ossn:user:validation:resend'), 'error');
 		redirect(REF);
 }
@@ -33,7 +31,7 @@ $vars = array(
 ossn_trigger_callback('user', 'before:login', $vars);
 
 $login           = new OssnUser;
-$login->username = $username;
+$login->email = $email;
 $login->password = $password;
 if($login->Login()) {
 		//One uneeded redirection when login #516
